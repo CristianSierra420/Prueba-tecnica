@@ -11,9 +11,9 @@
 <header class="site-header">
   <div class="container">
     <?php if (!empty($isLoginPage)): ?>
-      <span class="logo">✏️ Mi Blog</span>
+      <span class="logo">✏️ Blog</span>
     <?php else: ?>
-      <a href="<?= BASE_URL ?>/index.php?page=blog" class="logo">✏️ Mi Blog</a>
+      <span class="logo">Panel Administrativo</span>
     <?php endif; ?>
 
     <nav>
