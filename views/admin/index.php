@@ -48,7 +48,7 @@ require_once ROOT . '/views/layouts/header.php';
                 method="POST"
                 action="index.php?page=admin.delete"
                 style="display:inline"
-                onsubmit="return confirm('¿Seguro que quieres eliminar esta publicación?')"
+                onsubmit="return confirmDelete(this, <?= $post['id'] ?>)"
               >
                 <input type="hidden" name="id" value="<?= $post['id'] ?>" />
                 <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>

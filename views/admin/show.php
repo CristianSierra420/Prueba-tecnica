@@ -32,9 +32,10 @@ require_once ROOT . '/views/layouts/header.php';
   <!-- Eliminar desde el detalle -->
   <div class="detail-actions">
     <form
+      id="deleteForm"
       method="POST"
       action="index.php?page=admin.delete"
-      onsubmit="return confirm('¿Seguro que quieres eliminar esta publicación?')"
+      onsubmit="return confirmDelete(this, <?= $post['id'] ?>)"
     >
       <input type="hidden" name="id" value="<?= $post['id'] ?>" />
       <button type="submit" class="btn btn-danger">Eliminar publicación</button>
