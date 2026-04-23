@@ -2,6 +2,8 @@
 // config/database.php
 // Archivo para la conexión a la base de datos
 
+define('BASE_URL', '/Prueba tecnica/public');
+
 // Datos de conexión (cámbialos si tu MySQL usa otros)
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'prueba tecnica');
