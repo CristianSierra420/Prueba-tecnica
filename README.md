@@ -61,9 +61,15 @@ Proyecto desarrollado en PHP con arquitectura MVC para gestión de posts y auten
 
 ## Uso
 
+### Flujo de Acceso
+1. Acceder a `http://localhost/Prueba%20tecnica/public/`
+2. Se abre automáticamente el **Login** (es obligatorio)
+3. Ingresar credenciales de administrador
+4. Acceso al **Panel Administrativo** para gestionar publicaciones
+
 ### Panel Administrativo
-- Acceder a `/public/admin/` para gestionar posts
-- Login requerido
+- Ver, crear, editar y eliminar posts
+- Gestión de imágenes subidas
 
 ### Blog Público
 - Ver posts publicados en `/public/blog/`
@@ -83,6 +89,13 @@ $db = 'prueba_tecnica';
 $user = 'root';
 $pass = '';
 ```
+
+## Credenciales de Prueba
+
+Para acceder al panel administrativo:
+
+- **Usuario:** admin
+- **Contraseña:** (123456)
 
 ## Características
 
