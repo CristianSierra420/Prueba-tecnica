@@ -7,8 +7,8 @@ require_once ROOT . '/config/database.php';
 
 session_start();
 
-// Página solicitada (por defecto: blog)
-$page = $_GET['page'] ?? 'blog';
+// Página solicitada (por defecto: login)
+$page = $_GET['page'] ?? 'login';
 
 switch ($page) {
 

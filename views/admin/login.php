@@ -1,6 +1,7 @@
 <?php
 
 $pageTitle = 'Iniciar sesión';
+$isLoginPage = true;
 require_once ROOT . '/views/layouts/header.php';
 ?>
 

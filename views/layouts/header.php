@@ -10,15 +10,17 @@
 
 <header class="site-header">
   <div class="container">
-    <a href="<?= BASE_URL ?>/index.php?page=blog" class="logo">✏️ Mi Blog</a>
+    <?php if (!empty($isLoginPage)): ?>
+      <span class="logo">✏️ Mi Blog</span>
+    <?php else: ?>
+      <a href="<?= BASE_URL ?>/index.php?page=blog" class="logo">✏️ Mi Blog</a>
+    <?php endif; ?>
 
     <nav>
       <?php if (!empty($_SESSION['user_id'])): ?>
         <span class="nav-user">👤 <?= htmlspecialchars($_SESSION['username']) ?></span>
         <a href="<?= BASE_URL ?>/index.php?page=admin" class="btn btn-outline">Panel admin</a>
         <a href="<?= BASE_URL ?>/index.php?page=logout" class="btn btn-danger">Cerrar sesión</a>
-      <?php else: ?>
-        <a href="<?= BASE_URL ?>/index.php?page=login" class="btn btn-outline">Admin</a>
       <?php endif; ?>
     </nav>
   </div>
