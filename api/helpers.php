@@ -16,10 +16,12 @@ function json(array $data, int $status = 200): void
 // Valida autenticación Basic
 function basicAuth(): void
 {
-    // Obtiene el header Authorization
-    $authHeader = $_SERVER['HTTP_AUTHORIZATION']
-               ?? $_SERVER['REDIRECT_HTTP_AUTHORIZATION']
-               ?? '';
+    // Obtiene el header Authorization y lo decodifica (soporta diferentes servidores) esto sirve para que cubre todos los casos de XAMPP
+   $authHeader = $_SERVER['HTTP_AUTHORIZATION']
+           ?? $_SERVER['REDIRECT_HTTP_AUTHORIZATION']
+           ?? (function_exists('apache_request_headers') 
+              ? (apache_request_headers()['Authorization'] ?? '') 
+              : '');
 
     if (!str_starts_with($authHeader, 'Basic ')) {
         header('WWW-Authenticate: Basic realm="Blog API"');
